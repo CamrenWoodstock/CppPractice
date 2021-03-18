@@ -1,0 +1,31 @@
+How to build the programs
+--------------------------
+Note that C++ has changed quite a bit over the past 10 years, after being stagnant for
+a while, because committees kept arguing about which additions were highest priority.
+The "standard" versions are C++98, C++03, C++11, C++14, C++17.  
+C++20 is still in development
+
+Just be aware that some code you are going to run into may only build for a specific
+version of C++.  For our labs and assignments this semester we will use C++17,
+but except for some of the threading stuff, most of the code would work fine in C++14
+or even C++11.
+
+On Linux:
+	g++ -Wall main.cpp -o prog
+	
+	
+On macOS, unless you installed g++ (using Homebrew or MacPort), the default C++
+compiler is the (more advanced) clang++ compiler.  The drawback is that you have to 
+specify which dialect of C++ you want to use.  
+
+	-std=c++98  or -std=c++03  or -std=c++11  or -std=c++14  or -std=c++17
+
+and also which standard library to use
+
+	The only one that seems to work is libc++
+
+So...
+
+clang++ -std=c++17 main.cpp -stdlib=libc++ -o prog 
+
+	
